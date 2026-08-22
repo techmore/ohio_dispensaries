@@ -21,7 +21,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -84.14471724029,
-  "lat": 40.76066671384
+  "lat": 40.76066671384,
+  "website": "https://curaleaf.com"
  },
  {
   "name": "Klutch Cannabis",
@@ -34,7 +35,8 @@
   "source": "Ohio DCC",
   "lat": 40.6356208,
   "lon": -82.2334709,
-  "approx": true
+  "approx": true,
+  "website": "https://klutchcannabis.com"
  },
  {
   "name": "Italian Herbs",
@@ -71,7 +73,9 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -82.094653402026,
-  "lat": 39.332283177644
+  "lat": 39.332283177644,
+  "website": "https://www.bloommedicinals.com",
+  "contact_email": "info@bloommedicinals.com"
  },
  {
   "name": "Firelands Scientific",
@@ -83,7 +87,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -82.066439268749,
-  "lat": 39.336758539011
+  "lat": 39.336758539011,
+  "website": "https://firelandscannabis.com"
  },
  {
   "name": "Herbal Wellness Center Athens",
@@ -120,7 +125,9 @@
   "source": "Ohio DCC",
   "lat": 40.5678265,
   "lon": -84.1935594,
-  "approx": true
+  "approx": true,
+  "website": "https://verilife.com",
+  "contact_email": "cs.albany@verilife.com"
  },
  {
   "name": "Columbia Care OH",
@@ -144,7 +151,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -80.746002706431,
-  "lat": 40.072744720963
+  "lat": 40.072744720963,
+  "website": "https://crescolabs.com"
  },
  {
   "name": "Cresco Labs Ohio, LLC",
@@ -157,7 +165,8 @@
   "source": "Ohio DCC",
   "lat": 38.6556296,
   "lon": -83.7610323,
-  "approx": true
+  "approx": true,
+  "website": "https://crescolabs.com"
  },
  {
   "name": "Uplift",
@@ -194,7 +203,9 @@
   "source": "Ohio DCC",
   "lat": 39.480056,
   "lon": -84.5518916,
-  "approx": true
+  "approx": true,
+  "website": "https://www.bloommedicinals.com",
+  "contact_email": "info@bloommedicinals.com"
  },
  {
   "name": "Cannabist",
@@ -231,7 +242,8 @@
   "source": "Ohio DCC",
   "lat": 39.516644,
   "lon": -84.4041725,
-  "approx": true
+  "approx": true,
+  "website": "https://frxhealth.com"
  },
  {
   "name": "Herbal Wellness Center Fairfield",
@@ -304,7 +316,9 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -83.817336386304,
-  "lat": 39.894486924072
+  "lat": 39.894486924072,
+  "website": "https://www.terrassana.com",
+  "contact_email": "info@terrassana.com"
  },
  {
   "name": "Ayr Wellness",
@@ -316,7 +330,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -84.163389350683,
-  "lat": 39.229618263972
+  "lat": 39.229618263972,
+  "website": "https://ayrwellness.com"
  },
  {
   "name": "Beyond / Hello",
@@ -437,7 +452,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -81.481708489043,
-  "lat": 41.462286016298
+  "lat": 41.462286016298,
+  "website": "https://ayrwellness.com"
  },
  {
   "name": "AYR Dispensary \u2014 Parma Heights",
@@ -449,7 +465,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -81.774720381406,
-  "lat": 41.383860765518
+  "lat": 41.383860765518,
+  "website": "https://ayrwellness.com"
  },
  {
   "name": "Beyond Hello",
@@ -569,7 +586,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -81.690270955263,
-  "lat": 41.498189692644
+  "lat": 41.498189692644,
+  "website": "https://klutchcannabis.com"
  },
  {
   "name": "Mavuno of Athens",
@@ -666,7 +684,9 @@
   "source": "Ohio DCC",
   "lat": 41.4169974,
   "lon": -81.6059581,
-  "approx": true
+  "approx": true,
+  "website": "https://www.terrassana.com",
+  "contact_email": "info@terrassana.com"
  },
  {
   "name": "Terrasana",
@@ -678,7 +698,9 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -81.767619899879,
-  "lat": 41.418355174527
+  "lat": 41.418355174527,
+  "website": "https://www.terrassana.com",
+  "contact_email": "info@terrassana.com"
  },
  {
   "name": "The Landing Dispensary",
@@ -762,7 +784,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -82.997030490262,
-  "lat": 40.152137494945
+  "lat": 40.152137494945,
+  "website": "https://ayrwellness.com"
  },
  {
   "name": "Healing Through Cannabis LLC",
@@ -822,7 +845,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -82.585087016495,
-  "lat": 41.39637885084
+  "lat": 41.39637885084,
+  "website": "https://firelandscannabis.com"
  },
  {
   "name": "Greenlight Dispensary",
@@ -882,7 +906,9 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -83.117537202792,
-  "lat": 39.925837310213
+  "lat": 39.925837310213,
+  "website": "https://www.bloommedicinals.com",
+  "contact_email": "info@bloommedicinals.com"
  },
  {
   "name": "Bloom Medicinals",
@@ -894,7 +920,9 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -82.964391707363,
-  "lat": 39.934040459018
+  "lat": 39.934040459018,
+  "website": "https://www.bloommedicinals.com",
+  "contact_email": "info@bloommedicinals.com"
  },
  {
   "name": "Certified Dispensary",
@@ -943,7 +971,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -82.8490297738,
-  "lat": 40.092256143918
+  "lat": 40.092256143918,
+  "website": "https://curaleaf.com"
  },
  {
   "name": "Elevated Growth",
@@ -1003,7 +1032,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -83.094083932746,
-  "lat": 40.065483084831
+  "lat": 40.065483084831,
+  "website": "https://klutchcannabis.com"
  },
  {
   "name": "Locals Dispensary",
@@ -1125,7 +1155,9 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -83.045824957206,
-  "lat": 39.971052625579
+  "lat": 39.971052625579,
+  "website": "https://www.terrassana.com",
+  "contact_email": "info@terrassana.com"
  },
  {
   "name": "Terrasana",
@@ -1137,7 +1169,9 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -82.944508514911,
-  "lat": 39.948347358927
+  "lat": 39.948347358927,
+  "website": "https://www.terrassana.com",
+  "contact_email": "info@terrassana.com"
  },
  {
   "name": "The Botanist \u2014 Columbus",
@@ -1149,7 +1183,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -83.005736489133,
-  "lat": 39.971473096786
+  "lat": 39.971473096786,
+  "website": "https://thebotanist.com"
  },
  {
   "name": "The Landing Dispensary",
@@ -1185,7 +1220,9 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -83.013391311087,
-  "lat": 40.022462401335
+  "lat": 40.022462401335,
+  "website": "https://www.trulieve.com",
+  "contact_email": "support@trulieve.com"
  },
  {
   "name": "Trulieve South High",
@@ -1197,7 +1234,9 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -82.998315066993,
-  "lat": 39.949820062229
+  "lat": 39.949820062229,
+  "website": "https://www.trulieve.com",
+  "contact_email": "support@trulieve.com"
  },
  {
   "name": "Trulieve Medical Marijuana Dispensary",
@@ -1209,7 +1248,9 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -82.991924978546,
-  "lat": 40.135222809076
+  "lat": 40.135222809076,
+  "website": "https://www.trulieve.com",
+  "contact_email": "support@trulieve.com"
  },
  {
   "name": "Woodward Fine Cannabis",
@@ -1462,7 +1503,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -84.420427697401,
-  "lat": 39.166602828926
+  "lat": 39.166602828926,
+  "website": "https://www.sunnyside.com"
  },
  {
   "name": "The Garden Club Dispensary",
@@ -1510,7 +1552,9 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -84.437773823985,
-  "lat": 39.11663500484
+  "lat": 39.11663500484,
+  "website": "https://www.trulieve.com",
+  "contact_email": "support@trulieve.com"
  },
  {
   "name": "Verilife Cincinnati",
@@ -1522,7 +1566,9 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -84.426135740664,
-  "lat": 39.170911749986
+  "lat": 39.170911749986,
+  "website": "https://verilife.com",
+  "contact_email": "cs.albany@verilife.com"
  },
  {
   "name": "Zen Leaf Cincinnati",
@@ -1534,7 +1580,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -84.47370478234,
-  "lat": 39.216200483304
+  "lat": 39.216200483304,
+  "website": "https://zenleaf.com"
  },
  {
   "name": "Zips Dispensary",
@@ -1570,7 +1617,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -83.599690546925,
-  "lat": 41.054844085512
+  "lat": 41.054844085512,
+  "website": "https://curaleaf.com"
  },
  {
   "name": "Trulieve Cannabis Dispensary (Findlay)",
@@ -1582,7 +1630,9 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -83.674997300179,
-  "lat": 41.042043698093
+  "lat": 41.042043698093,
+  "website": "https://www.trulieve.com",
+  "contact_email": "support@trulieve.com"
  },
  {
   "name": "Verilife Hillsboro",
@@ -1594,7 +1644,9 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -83.60804083275,
-  "lat": 39.218353279968
+  "lat": 39.218353279968,
+  "website": "https://verilife.com",
+  "contact_email": "cs.albany@verilife.com"
  },
  {
   "name": "Cannabist",
@@ -1654,7 +1706,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -80.688648814768,
-  "lat": 40.372241583871
+  "lat": 40.372241583871,
+  "website": "https://www.sunnyside.com"
  },
  {
   "name": "Amplify",
@@ -1678,7 +1731,9 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -81.282999682166,
-  "lat": 41.723278649007
+  "lat": 41.723278649007,
+  "website": "https://www.bloommedicinals.com",
+  "contact_email": "info@bloommedicinals.com"
  },
  {
   "name": "Buckeye Relief",
@@ -1703,7 +1758,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -81.461691638417,
-  "lat": 41.615709173532
+  "lat": 41.615709173532,
+  "website": "https://thebotanist.com"
  },
  {
   "name": "Zips Dispensary",
@@ -1753,7 +1809,8 @@
   "source": "Ohio DCC",
   "lat": 38.438232,
   "lon": -82.3811273,
-  "approx": true
+  "approx": true,
+  "website": "https://www.sunnyside.com"
  },
  {
   "name": "Curaleaf",
@@ -1765,7 +1822,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -82.427981260364,
-  "lat": 40.079706259957
+  "lat": 40.079706259957,
+  "website": "https://curaleaf.com"
  },
  {
   "name": "Sunnyside",
@@ -1777,7 +1835,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -82.451326955793,
-  "lat": 40.057755895902
+  "lat": 40.057755895902,
+  "website": "https://www.sunnyside.com"
  },
  {
   "name": "Zen Leaf Newark",
@@ -1789,7 +1848,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -82.42777360203,
-  "lat": 40.082165514439
+  "lat": 40.082165514439,
+  "website": "https://zenleaf.com"
  },
  {
   "name": "FRX Elyria Craft Cannabis Dispensary",
@@ -1801,7 +1861,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -82.073145447135,
-  "lat": 41.358926927514
+  "lat": 41.358926927514,
+  "website": "https://frxhealth.com"
  },
  {
   "name": "Klutch Cannabis",
@@ -1813,7 +1874,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -82.119613619294,
-  "lat": 41.422102692002
+  "lat": 41.422102692002,
+  "website": "https://klutchcannabis.com"
  },
  {
   "name": "GTI Ohio, LLC",
@@ -1849,7 +1911,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -82.216310674514,
-  "lat": 41.169733888378
+  "lat": 41.169733888378,
+  "website": "https://klutchcannabis.com"
  },
  {
   "name": "Trulieve Lorain",
@@ -1861,7 +1924,9 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -82.23895391001,
-  "lat": 41.4148233265
+  "lat": 41.4148233265,
+  "website": "https://www.trulieve.com",
+  "contact_email": "support@trulieve.com"
  },
  {
   "name": "CREAM Apothecaries Ohio",
@@ -1909,7 +1974,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -83.380437786245,
-  "lat": 39.95134237737
+  "lat": 39.95134237737,
+  "website": "https://pureohiowellness.com"
  },
  {
   "name": "Green Leaf Therapy LLC",
@@ -1957,7 +2023,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -83.078539041592,
-  "lat": 40.57804155085
+  "lat": 40.57804155085,
+  "website": "https://www.sunnyside.com"
  },
  {
   "name": "The Forest Seville",
@@ -2017,7 +2084,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -84.122691607171,
-  "lat": 39.769517834877
+  "lat": 39.769517834877,
+  "website": "https://ayrwellness.com"
  },
  {
   "name": "Cannabist",
@@ -2053,7 +2121,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -84.188992245552,
-  "lat": 39.783121827218
+  "lat": 39.783121827218,
+  "website": "https://frxhealth.com"
  },
  {
   "name": "Green Releaf",
@@ -2101,7 +2170,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -84.201759680079,
-  "lat": 39.8196586346
+  "lat": 39.8196586346,
+  "website": "https://pureohiowellness.com"
  },
  {
   "name": "Zen Leaf Dayton",
@@ -2113,7 +2183,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -84.106202988973,
-  "lat": 39.771288643345
+  "lat": 39.771288643345,
+  "website": "https://zenleaf.com"
  },
  {
   "name": "Greenlight Dispensary",
@@ -2149,7 +2220,9 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -82.02577984882,
-  "lat": 39.991572234166
+  "lat": 39.991572234166,
+  "website": "https://www.trulieve.com",
+  "contact_email": "support@trulieve.com"
  },
  {
   "name": "Mother Grows Best",
@@ -2198,7 +2271,8 @@
   "source": "Ohio DCC",
   "lat": 41.239223,
   "lon": -81.345941,
-  "approx": true
+  "approx": true,
+  "website": "https://ayrwellness.com"
  },
  {
   "name": "Bliss Ohio",
@@ -2270,7 +2344,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -82.975752316416,
-  "lat": 39.369996916439
+  "lat": 39.369996916439,
+  "website": "https://www.sunnyside.com"
  },
  {
   "name": "Terrasana",
@@ -2282,7 +2357,9 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -83.08394986713,
-  "lat": 41.339534626692
+  "lat": 41.339534626692,
+  "website": "https://www.terrassana.com",
+  "contact_email": "info@terrassana.com"
  },
  {
   "name": "Backroad Wellness",
@@ -2342,7 +2419,9 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -81.526675249206,
-  "lat": 40.796424057444
+  "lat": 40.796424057444,
+  "website": "https://www.bloommedicinals.com",
+  "contact_email": "info@bloommedicinals.com"
  },
  {
   "name": "Greenleaf Apothecaries, LLC",
@@ -2366,7 +2445,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -81.370355650645,
-  "lat": 40.800153901823
+  "lat": 40.800153901823,
+  "website": "https://klutchcannabis.com"
  },
  {
   "name": "LMTT, LLC",
@@ -2414,7 +2494,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -81.38868671164,
-  "lat": 40.834338001549
+  "lat": 40.834338001549,
+  "website": "https://zenleaf.com"
  },
  {
   "name": "Bloom Medicinals",
@@ -2426,7 +2507,9 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -81.491022151934,
-  "lat": 41.087696876056
+  "lat": 41.087696876056,
+  "website": "https://www.bloommedicinals.com",
+  "contact_email": "info@bloommedicinals.com"
  },
  {
   "name": "Culture Retail Partners of Ohio, Inc.",
@@ -2462,7 +2545,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -81.471369369817,
-  "lat": 41.119945296045
+  "lat": 41.119945296045,
+  "website": "https://curaleaf.com"
  },
  {
   "name": "FRX Health",
@@ -2474,7 +2558,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -81.508494093075,
-  "lat": 41.128594184862
+  "lat": 41.128594184862,
+  "website": "https://frxhealth.com"
  },
  {
   "name": "Greenleaf Apothecaries, LLC",
@@ -2498,7 +2583,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -81.527280604751,
-  "lat": 41.348173491014
+  "lat": 41.348173491014,
+  "website": "https://klutchcannabis.com"
  },
  {
   "name": "Pure Ohio Wellness \u2014 Tallmadge",
@@ -2510,7 +2596,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -81.441526923119,
-  "lat": 41.086634633557
+  "lat": 41.086634633557,
+  "website": "https://pureohiowellness.com"
  },
  {
   "name": "PWC D1, LLC",
@@ -2546,7 +2633,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -80.736736936312,
-  "lat": 41.202770573974
+  "lat": 41.202770573974,
+  "website": "https://ayrwellness.com"
  },
  {
   "name": "Beyond Hello",
@@ -2594,7 +2682,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -80.703543970675,
-  "lat": 41.161917549904
+  "lat": 41.161917549904,
+  "website": "https://curaleaf.com"
  },
  {
   "name": "Ratio",
@@ -2655,7 +2744,9 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -84.335779381935,
-  "lat": 39.497340461086
+  "lat": 39.497340461086,
+  "website": "https://www.terrassana.com",
+  "contact_email": "info@terrassana.com"
  },
  {
   "name": "Deaver Ohio LLC",
@@ -2716,7 +2807,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -83.65065207984,
-  "lat": 41.392982138809
+  "lat": 41.392982138809,
+  "website": "https://zenleaf.com"
  },
  {
   "name": "Ohio Cannabis Company",
