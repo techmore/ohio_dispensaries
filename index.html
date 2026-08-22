@@ -66,6 +66,7 @@ footer a{color:var(--hemp)}
       <button class="tab" data-cat="Vape Shop">Vape Shops</button>
     </div>
     <span class="count" id="count"></span>
+    <button class="tab" id="csvbtn" style="border-color:var(--accent);color:var(--accent)">⬇ Export CSV</button>
   </div>
 </header>
 <main>
@@ -142,6 +143,15 @@ function render(){
   });
   document.getElementById('count').textContent=`${n} businesses`;
   if(!n) list.innerHTML='<div class="empty">No results. Try clearing filters.</div>';
+  document.getElementById('csvbtn').addEventListener('click',()=>{
+    const rows=[['Name','Category','Address','City','State','ZIP','County','Phone','Website','Latitude','Longitude','Approximate location','Source']];
+    DATA.filter(matches).forEach(b=>rows.push([b.name,b.category,b.address||'',b.city||'','OH',b.zip||'',b.county||'',b.phone||'',b.website||'',b.lat,b.lon,b.approx?'city-level':'exact',b.source||'']));
+    const csv=rows.map(r=>r.map(v=>`"${String(v??'').replace(/"/g,'""')}"`).join(',')).join('\n');
+    const a=document.createElement('a');
+    a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
+    a.download=`ohio_${(activeCat||'all').replace(/\W+/g,'_').toLowerCase()}${query?'_filtered':''}.csv`;
+    a.click();
+  });
 }
 
 function shortCat(c){return {'Hemp / CBD':'Hemp/CBD'}[c]||c}
