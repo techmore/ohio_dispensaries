@@ -9,7 +9,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -84.078532191158,
-  "lat": 40.730702081394
+  "lat": 40.730702081394,
+  "owner": "Pat & Deb Hennessey \u2014 Owners (Zanesville entrepreneurs)"
  },
  {
   "name": "Curaleaf",
@@ -36,7 +37,8 @@
   "lat": 40.6356208,
   "lon": -82.2334709,
   "approx": true,
-  "website": "https://klutchcannabis.com"
+  "website": "https://klutchcannabis.com",
+  "owner": "Ohio-owned (AT-CPC of Ohio); leadership not publicly listed"
  },
  {
   "name": "Italian Herbs",
@@ -75,7 +77,8 @@
   "lon": -82.094653402026,
   "lat": 39.332283177644,
   "website": "https://www.bloommedicinals.com",
-  "contact_email": "info@bloommedicinals.com"
+  "contact_email": "info@bloommedicinals.com",
+  "owner": "Nicole Van Rensburg \u2014 CEO; William Hollander \u2014 COO (siblings, founders)"
  },
  {
   "name": "Firelands Scientific",
@@ -205,7 +208,8 @@
   "lon": -84.5518916,
   "approx": true,
   "website": "https://www.bloommedicinals.com",
-  "contact_email": "info@bloommedicinals.com"
+  "contact_email": "info@bloommedicinals.com",
+  "owner": "Nicole Van Rensburg \u2014 CEO; William Hollander \u2014 COO (siblings, founders)"
  },
  {
   "name": "Cannabist",
@@ -243,7 +247,8 @@
   "lat": 39.516644,
   "lon": -84.4041725,
   "approx": true,
-  "website": "https://frxhealth.com"
+  "website": "https://frxhealth.com",
+  "owner": "Rebecca Myers \u2014 Founder & CEO"
  },
  {
   "name": "Herbal Wellness Center Fairfield",
@@ -317,7 +322,6 @@
   "source": "Ohio DCC",
   "lon": -83.817336386304,
   "lat": 39.894486924072,
-  "website": "https://www.terrassana.com",
   "contact_email": "info@terrassana.com"
  },
  {
@@ -392,7 +396,8 @@
   "source": "Ohio DCC",
   "lat": 40.6186756,
   "lon": -80.5772928,
-  "approx": true
+  "approx": true,
+  "owner": "Rebecca Myers \u2014 Founder & CEO (FRX Health parent)"
  },
  {
   "name": "Ascend Coshocton",
@@ -587,7 +592,8 @@
   "source": "Ohio DCC",
   "lon": -81.690270955263,
   "lat": 41.498189692644,
-  "website": "https://klutchcannabis.com"
+  "website": "https://klutchcannabis.com",
+  "owner": "Ohio-owned (AT-CPC of Ohio); leadership not publicly listed"
  },
  {
   "name": "Mavuno of Athens",
@@ -685,7 +691,6 @@
   "lat": 41.4169974,
   "lon": -81.6059581,
   "approx": true,
-  "website": "https://www.terrassana.com",
   "contact_email": "info@terrassana.com"
  },
  {
@@ -699,7 +704,6 @@
   "source": "Ohio DCC",
   "lon": -81.767619899879,
   "lat": 41.418355174527,
-  "website": "https://www.terrassana.com",
   "contact_email": "info@terrassana.com"
  },
  {
@@ -908,7 +912,8 @@
   "lon": -83.117537202792,
   "lat": 39.925837310213,
   "website": "https://www.bloommedicinals.com",
-  "contact_email": "info@bloommedicinals.com"
+  "contact_email": "info@bloommedicinals.com",
+  "owner": "Nicole Van Rensburg \u2014 CEO; William Hollander \u2014 COO (siblings, founders)"
  },
  {
   "name": "Bloom Medicinals",
@@ -922,7 +927,8 @@
   "lon": -82.964391707363,
   "lat": 39.934040459018,
   "website": "https://www.bloommedicinals.com",
-  "contact_email": "info@bloommedicinals.com"
+  "contact_email": "info@bloommedicinals.com",
+  "owner": "Nicole Van Rensburg \u2014 CEO; William Hollander \u2014 COO (siblings, founders)"
  },
  {
   "name": "Certified Dispensary",
@@ -1033,7 +1039,8 @@
   "source": "Ohio DCC",
   "lon": -83.094083932746,
   "lat": 40.065483084831,
-  "website": "https://klutchcannabis.com"
+  "website": "https://klutchcannabis.com",
+  "owner": "Ohio-owned (AT-CPC of Ohio); leadership not publicly listed"
  },
  {
   "name": "Locals Dispensary",
@@ -1156,7 +1163,6 @@
   "source": "Ohio DCC",
   "lon": -83.045824957206,
   "lat": 39.971052625579,
-  "website": "https://www.terrassana.com",
   "contact_email": "info@terrassana.com"
  },
  {
@@ -1170,7 +1176,6 @@
   "source": "Ohio DCC",
   "lon": -82.944508514911,
   "lat": 39.948347358927,
-  "website": "https://www.terrassana.com",
   "contact_email": "info@terrassana.com"
  },
  {
@@ -1298,7 +1303,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -81.635235824736,
-  "lat": 40.01191833852
+  "lat": 40.01191833852,
+  "owner": "Pat & Deb Hennessey \u2014 Owners (Zanesville entrepreneurs)"
  },
  {
   "name": "Aron OH LLC",
@@ -1733,7 +1739,8 @@
   "lon": -81.282999682166,
   "lat": 41.723278649007,
   "website": "https://www.bloommedicinals.com",
-  "contact_email": "info@bloommedicinals.com"
+  "contact_email": "info@bloommedicinals.com",
+  "owner": "Nicole Van Rensburg \u2014 CEO; William Hollander \u2014 COO (siblings, founders)"
  },
  {
   "name": "Buckeye Relief",
@@ -1862,7 +1869,8 @@
   "source": "Ohio DCC",
   "lon": -82.073145447135,
   "lat": 41.358926927514,
-  "website": "https://frxhealth.com"
+  "website": "https://frxhealth.com",
+  "owner": "Rebecca Myers \u2014 Founder & CEO"
  },
  {
   "name": "Klutch Cannabis",
@@ -1875,7 +1883,8 @@
   "source": "Ohio DCC",
   "lon": -82.119613619294,
   "lat": 41.422102692002,
-  "website": "https://klutchcannabis.com"
+  "website": "https://klutchcannabis.com",
+  "owner": "Ohio-owned (AT-CPC of Ohio); leadership not publicly listed"
  },
  {
   "name": "GTI Ohio, LLC",
@@ -1899,7 +1908,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -82.203399583914,
-  "lat": 41.458198592064
+  "lat": 41.458198592064,
+  "owner": "Joey Bernon \u2014 COO/Owner (now Curaleaf-operated)"
  },
  {
   "name": "The Citizen by Klutch",
@@ -1912,7 +1922,8 @@
   "source": "Ohio DCC",
   "lon": -82.216310674514,
   "lat": 41.169733888378,
-  "website": "https://klutchcannabis.com"
+  "website": "https://klutchcannabis.com",
+  "owner": "Ohio-owned (AT-CPC of Ohio); leadership not publicly listed"
  },
  {
   "name": "Trulieve Lorain",
@@ -1975,7 +1986,8 @@
   "source": "Ohio DCC",
   "lon": -83.380437786245,
   "lat": 39.95134237737,
-  "website": "https://pureohiowellness.com"
+  "website": "https://pureohiowellness.com",
+  "owner": "Larry Pegram \u2014 Founder & CEO"
  },
  {
   "name": "Green Leaf Therapy LLC",
@@ -2122,7 +2134,8 @@
   "source": "Ohio DCC",
   "lon": -84.188992245552,
   "lat": 39.783121827218,
-  "website": "https://frxhealth.com"
+  "website": "https://frxhealth.com",
+  "owner": "Rebecca Myers \u2014 Founder & CEO"
  },
  {
   "name": "Green Releaf",
@@ -2171,7 +2184,8 @@
   "source": "Ohio DCC",
   "lon": -84.201759680079,
   "lat": 39.8196586346,
-  "website": "https://pureohiowellness.com"
+  "website": "https://pureohiowellness.com",
+  "owner": "Larry Pegram \u2014 Founder & CEO"
  },
  {
   "name": "Zen Leaf Dayton",
@@ -2358,7 +2372,6 @@
   "source": "Ohio DCC",
   "lon": -83.08394986713,
   "lat": 41.339534626692,
-  "website": "https://www.terrassana.com",
   "contact_email": "info@terrassana.com"
  },
  {
@@ -2371,7 +2384,8 @@
   "category": "Dispensary",
   "source": "Ohio DCC",
   "lon": -82.950329173878,
-  "lat": 38.744020815086
+  "lat": 38.744020815086,
+  "owner": "Pat & Deb Hennessey \u2014 Owners (Zanesville entrepreneurs)"
  },
  {
   "name": "Herbal Wellness Center Portsmouth",
@@ -2421,7 +2435,8 @@
   "lon": -81.526675249206,
   "lat": 40.796424057444,
   "website": "https://www.bloommedicinals.com",
-  "contact_email": "info@bloommedicinals.com"
+  "contact_email": "info@bloommedicinals.com",
+  "owner": "Nicole Van Rensburg \u2014 CEO; William Hollander \u2014 COO (siblings, founders)"
  },
  {
   "name": "Greenleaf Apothecaries, LLC",
@@ -2446,7 +2461,8 @@
   "source": "Ohio DCC",
   "lon": -81.370355650645,
   "lat": 40.800153901823,
-  "website": "https://klutchcannabis.com"
+  "website": "https://klutchcannabis.com",
+  "owner": "Ohio-owned (AT-CPC of Ohio); leadership not publicly listed"
  },
  {
   "name": "LMTT, LLC",
@@ -2509,7 +2525,8 @@
   "lon": -81.491022151934,
   "lat": 41.087696876056,
   "website": "https://www.bloommedicinals.com",
-  "contact_email": "info@bloommedicinals.com"
+  "contact_email": "info@bloommedicinals.com",
+  "owner": "Nicole Van Rensburg \u2014 CEO; William Hollander \u2014 COO (siblings, founders)"
  },
  {
   "name": "Culture Retail Partners of Ohio, Inc.",
@@ -2559,7 +2576,8 @@
   "source": "Ohio DCC",
   "lon": -81.508494093075,
   "lat": 41.128594184862,
-  "website": "https://frxhealth.com"
+  "website": "https://frxhealth.com",
+  "owner": "Rebecca Myers \u2014 Founder & CEO"
  },
  {
   "name": "Greenleaf Apothecaries, LLC",
@@ -2584,7 +2602,8 @@
   "source": "Ohio DCC",
   "lon": -81.527280604751,
   "lat": 41.348173491014,
-  "website": "https://klutchcannabis.com"
+  "website": "https://klutchcannabis.com",
+  "owner": "Ohio-owned (AT-CPC of Ohio); leadership not publicly listed"
  },
  {
   "name": "Pure Ohio Wellness \u2014 Tallmadge",
@@ -2597,7 +2616,8 @@
   "source": "Ohio DCC",
   "lon": -81.441526923119,
   "lat": 41.086634633557,
-  "website": "https://pureohiowellness.com"
+  "website": "https://pureohiowellness.com",
+  "owner": "Larry Pegram \u2014 Founder & CEO"
  },
  {
   "name": "PWC D1, LLC",
@@ -2745,7 +2765,6 @@
   "source": "Ohio DCC",
   "lon": -84.335779381935,
   "lat": 39.497340461086,
-  "website": "https://www.terrassana.com",
   "contact_email": "info@terrassana.com"
  },
  {
@@ -3496,7 +3515,8 @@
   "county": "",
   "source": "CannabisPromotions directory",
   "lat": 41.4979814,
-  "lon": -81.6903786
+  "lon": -81.6903786,
+  "owner": "Ohio-owned (AT-CPC of Ohio); leadership not publicly listed"
  },
  {
   "name": "Bud Barn Depot LLC",
@@ -3588,7 +3608,8 @@
   "source": "CannabisPromotions directory",
   "lat": 41.1362729,
   "lon": -81.4828123,
-  "approx": true
+  "approx": true,
+  "owner": "Rebecca Myers \u2014 Founder & CEO"
  },
  {
   "name": "Sunnyside Recreational & Medical Marijuana Dispensary - Bridgeport",
@@ -4169,7 +4190,8 @@
   "source": "CannabisPromotions directory",
   "lat": 41.7244885,
   "lon": -81.245657,
-  "approx": true
+  "approx": true,
+  "owner": "Nicole Van Rensburg \u2014 CEO; William Hollander \u2014 COO (siblings, founders)"
  },
  {
   "name": "Your CBD Store - Lakewood, OH",
@@ -4560,7 +4582,8 @@
   "county": "",
   "source": "CannabisPromotions directory",
   "lat": 41.1019356,
-  "lon": -81.45346889999999
+  "lon": -81.45346889999999,
+  "owner": "Ohio-owned (AT-CPC of Ohio); leadership not publicly listed"
  },
  {
   "name": "Be Healthy CBD",
@@ -4874,7 +4897,8 @@
   "county": "",
   "source": "CannabisPromotions directory",
   "lat": 41.348282399999995,
-  "lon": -81.5276284
+  "lon": -81.5276284,
+  "owner": "Ohio-owned (AT-CPC of Ohio); leadership not publicly listed"
  },
  {
   "name": "High Intentions Smoke Shop & Glass Gallery",
@@ -5030,7 +5054,8 @@
   "county": "",
   "source": "CannabisPromotions directory",
   "lat": null,
-  "lon": null
+  "lon": null,
+  "owner": "Ohio-owned (AT-CPC of Ohio); leadership not publicly listed"
  },
  {
   "name": "The Garden Dispensary Camp Washington",
@@ -5304,7 +5329,8 @@
   "source": "CannabisPromotions directory",
   "lat": 41.3673191,
   "lon": -82.1073583,
-  "approx": true
+  "approx": true,
+  "owner": "Rebecca Myers \u2014 Founder & CEO"
  },
  {
   "name": "RISE Medical & Recreational Marijuana Dispensary Cleveland",
@@ -5553,7 +5579,8 @@
   "county": "",
   "source": "CannabisPromotions directory",
   "lat": null,
-  "lon": null
+  "lon": null,
+  "owner": "Ohio-owned (AT-CPC of Ohio); leadership not publicly listed"
  },
  {
   "name": "The valley smoke shop ( E Exchange )",
@@ -7312,7 +7339,8 @@
   "source": "CannabisPromotions directory",
   "lat": 40.126139,
   "lon": -82.9295287,
-  "approx": true
+  "approx": true,
+  "owner": "Joey Bernon \u2014 COO/Owner (now Curaleaf-operated)"
  },
  {
   "name": "Mavuno of Cleveland",
@@ -7782,7 +7810,8 @@
   "county": "",
   "source": "CannabisPromotions directory",
   "lat": 40.7999838,
-  "lon": -81.3706174
+  "lon": -81.3706174,
+  "owner": "Ohio-owned (AT-CPC of Ohio); leadership not publicly listed"
  },
  {
   "name": "Ohio Cannabis Connection Cleveland / Telemedicine - Medical Marijuana Doctors / Card",

@@ -57,6 +57,7 @@ main{flex:1;display:grid;grid-template-columns:minmax(320px,420px) 1fr;min-heigh
 .card .contact{margin-top:7px;display:flex;gap:12px;flex-wrap:wrap;font-size:.82rem}
 .card a{color:var(--hemp);text-decoration:none}
 .card a:hover{text-decoration:underline}
+.card .owner{margin-top:6px;font-size:.8rem;color:var(--text)}
 .meta{color:var(--muted);font-size:.75rem;margin-top:5px}
 .empty{color:var(--muted);text-align:center;padding:40px 20px;display:flex;flex-direction:column;gap:14px;align-items:center}
 .empty button{padding:8px 18px;border-radius:999px;border:1px solid var(--accent);background:none;color:var(--accent);font-family:inherit;font-size:.85rem;font-weight:600;cursor:pointer}
@@ -172,7 +173,9 @@ function render(){
       <div class="contact">
         ${b.phone?`<span>📞 <a href="tel:${esc(b.phone)}">${esc(b.phone)}</a></span>`:''}
         ${b.website?`<span>🌐 <a href="${esc(fixUrl(b.website))}" target="_blank" rel="noopener">website</a></span>`:''}
+        ${b.contact_email?`<span>✉️ <a href="mailto:${esc(b.contact_email)}">email</a></span>`:''}
       </div>
+      ${b.owner?`<div class="owner">👤 ${esc(b.owner)}</div>`:''}
       <div class="meta">Source: ${esc(b.source||'')}</div>`;
     const select=()=>{
       document.querySelectorAll('.card').forEach(c=>c.classList.remove('sel')); div.classList.add('sel');
@@ -187,7 +190,7 @@ function render(){
     div.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();select()}});
     list.appendChild(div);
     const m=L.circleMarker([b.lat,b.lon],{radius:7,color:catColor(b.category),weight:2,fillColor:catColor(b.category),fillOpacity:.55})
-      .bindPopup(`<b>${esc(b.name)}</b><br>${esc(shortCat(b.category))}<br>${esc(addr)}${b.phone?`<br>📞 ${esc(b.phone)}`:''}${b.website?`<br>🌐 <a href="${esc(fixUrl(b.website))}" target="_blank" rel="noopener">website</a>`:''}`);
+      .bindPopup(`<b>${esc(b.name)}</b><br>${esc(shortCat(b.category))}<br>${esc(addr)}${b.phone?`<br>📞 ${esc(b.phone)}`:''}${b.website?`<br>🌐 <a href="${esc(fixUrl(b.website))}" target="_blank" rel="noopener">website</a>`:''}${b.owner?`<br>👤 ${esc(b.owner)}`:''}`);
     m.addTo(map); markers.push(m);
   });
   const total=DATA.length;
@@ -210,8 +213,8 @@ function render(){
 }
 
 function exportCSV(){
-  const rows=[['Name','Category','Address','City','State','ZIP','County','Phone','Website','Latitude','Longitude','Approximate location','Source']];
-  DATA.filter(matches).forEach(b=>rows.push([b.name,b.category,b.address||'',b.city||'','OH',b.zip||'',b.county||'',b.phone||'',b.website||'',b.lat,b.lon,b.approx?'city-level':'exact',b.source||'']));
+  const rows=[['Name','Category','Address','City','State','ZIP','County','Phone','Website','Email','Owner/Leadership','Latitude','Longitude','Approximate location','Source']];
+  DATA.filter(matches).forEach(b=>rows.push([b.name,b.category,b.address||'',b.city||'','OH',b.zip||'',b.county||'',b.phone||'',b.website||'',b.contact_email||'',b.owner||'',b.lat,b.lon,b.approx?'city-level':'exact',b.source||'']));
   const csv=rows.map(r=>r.map(v=>`"${String(v??'').replace(/"/g,'""')}"`).join(',')).join('\n');
   const a=document.createElement('a');
   a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
