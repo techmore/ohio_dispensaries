@@ -12,91 +12,208 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <style>
 :root{
-  --bg:#0f1216; --panel:#171c23; --card:#1d242e; --border:#2a3340;
-  --text:#e8edf4; --muted:#8b98a8; --accent:#4ade80;
+  --bg:#0b0e13; --bg-soft:#10141b; --panel:#151a22; --panel-raised:#1a2029;
+  --card:#181e27; --card-hover:#1d2430; --border:#26303e; --border-strong:#334051;
+  --text:#eef2f8; --muted:#8fa0b3; --faint:#5c6b7d;
+  --accent:#4ade80; --accent-dim:rgba(74,222,128,.12);
   --disp:#4ade80; --hemp:#38bdf8; --smoke:#f59e0b; --vape:#a78bfa;
+  --radius:12px;
+  --shadow-sm:0 1px 2px rgba(0,0,0,.35);
+  --shadow-md:0 6px 20px -6px rgba(0,0,0,.5);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%}
-body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;display:flex;flex-direction:column;min-height:100vh}
-header{padding:18px 24px 14px;border-bottom:1px solid var(--border);background:rgba(15,18,22,.95);backdrop-filter:blur(8px);z-index:1000}
-h1{font-size:1.35rem;font-weight:700;letter-spacing:-.02em}
-h1 span{color:var(--accent)}
-.subtitle{color:var(--muted);font-size:.85rem;margin-top:2px}
-.controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:12px}
+body{
+  background:
+    radial-gradient(1100px 500px at 85% -10%, rgba(56,189,248,.06), transparent 60%),
+    radial-gradient(900px 450px at -10% -10%, rgba(74,222,128,.07), transparent 55%),
+    var(--bg);
+  color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  display:flex;flex-direction:column;min-height:100vh;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ---------- header ---------- */
+header{
+  padding:16px clamp(16px,4vw,28px) 14px;
+  border-bottom:1px solid var(--border);
+  background:rgba(11,14,19,.82);backdrop-filter:blur(12px);
+  z-index:1000;
+}
+.brandbar{display:flex;align-items:center;gap:12px}
+.logo{
+  width:38px;height:38px;border-radius:10px;flex:none;
+  background:linear-gradient(135deg,var(--disp),var(--hemp));
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 14px -4px rgba(74,222,128,.45), inset 0 1px 0 rgba(255,255,255,.25);
+}
+.logo svg{width:21px;height:21px;stroke:#08130b;stroke-width:2.2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+h1{font-size:clamp(1.15rem,2.4vw,1.35rem);font-weight:750;letter-spacing:-.02em}
+h1 span{background:linear-gradient(90deg,var(--disp),var(--hemp));-webkit-background-clip:text;background-clip:text;color:transparent}
+.subtitle{color:var(--muted);font-size:.84rem;margin-top:3px;line-height:1.4}
+
+.controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px}
 .searchwrap{position:relative;flex:1;min-width:220px;display:flex;align-items:center}
-.searchwrap svg{position:absolute;left:12px;width:15px;height:15px;stroke:var(--muted);pointer-events:none}
-#search{width:100%;padding:10px 34px;border-radius:8px;border:1px solid var(--border);background:var(--panel);color:var(--text);font-size:.95rem;outline:none;transition:border-color .15s, box-shadow .15s}
-#search:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(74,222,128,.15)}
-#clear{position:absolute;right:6px;background:none;border:none;color:var(--muted);font-size:1rem;cursor:pointer;padding:4px 8px;border-radius:6px;line-height:1}
+.searchwrap svg{position:absolute;left:12px;width:15px;height:15px;stroke:var(--muted);pointer-events:none;z-index:1}
+#search{
+  width:100%;padding:10px 36px;border-radius:10px;
+  border:1px solid var(--border);background:var(--panel);color:var(--text);
+  font-size:.95rem;outline:none;
+  transition:border-color .15s, box-shadow .15s, background .15s;
+  box-shadow:var(--shadow-sm);
+}
+#search::placeholder{color:var(--faint)}
+#search:hover{border-color:var(--border-strong)}
+#search:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(74,222,128,.16);background:var(--panel-raised)}
+#clear{position:absolute;right:6px;background:none;border:none;color:var(--muted);font-size:1rem;cursor:pointer;padding:4px 9px;border-radius:6px;line-height:1;z-index:1}
 #clear:hover{color:var(--text);background:var(--border)}
+
 .tabs{display:flex;gap:6px;flex-wrap:wrap}
-.tab{padding:8px 14px;border-radius:999px;border:1px solid var(--border);background:var(--panel);color:var(--muted);cursor:pointer;font-size:.82rem;font-weight:600;font-family:inherit;transition:.15s}
-.tab:hover{color:var(--text);border-color:var(--muted)}
-.tab.active{border-color:transparent;color:#0b0e12}
+.tab{
+  padding:8px 13px;border-radius:999px;border:1px solid var(--border);
+  background:var(--panel);color:var(--muted);cursor:pointer;
+  font-size:.82rem;font-weight:600;font-family:inherit;
+  transition:.15s;display:inline-flex;align-items:center;gap:6px;
+  box-shadow:var(--shadow-sm);
+}
+.tab .n{font-size:.68rem;font-weight:700;color:var(--faint);background:rgba(255,255,255,.05);padding:1px 6px;border-radius:999px;transition:.15s}
+.tab:hover{color:var(--text);border-color:var(--border-strong);transform:translateY(-1px)}
+.tab.active{border-color:transparent;color:#0b0e12;transform:none}
+.tab.active .n{background:rgba(0,0,0,.18);color:rgba(11,14,18,.75)}
 .tab[data-cat=Dispensary].active{background:var(--disp)}
 .tab[data-cat="Hemp / CBD"].active{background:var(--hemp)}
 .tab[data-cat="Smoke Shop"].active{background:var(--smoke)}
 .tab[data-cat="Vape Shop"].active{background:var(--vape)}
-.tab:focus-visible,#search:focus-visible,#csvbtn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.count{color:var(--muted);font-size:.82rem;white-space:nowrap}
-#csvbtn{display:inline-flex;align-items:center;gap:6px;margin-left:auto;padding:8px 16px;border-radius:8px;border:1px solid var(--accent);background:rgba(74,222,128,.08);color:var(--accent);cursor:pointer;font-size:.82rem;font-weight:600;font-family:inherit;transition:.15s}
-#csvbtn:hover{background:rgba(74,222,128,.18)}
+
+.count{color:var(--muted);font-size:.82rem;white-space:nowrap;font-variant-numeric:tabular-nums}
+.count b{color:var(--text);font-weight:700}
+#csvbtn{
+  display:inline-flex;align-items:center;gap:7px;margin-left:auto;
+  padding:9px 16px;border-radius:10px;border:1px solid var(--accent);
+  background:var(--accent-dim);color:var(--accent);cursor:pointer;
+  font-size:.82rem;font-weight:650;font-family:inherit;
+  transition:.15s;box-shadow:var(--shadow-sm);
+}
+#csvbtn svg{width:14px;height:14px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+#csvbtn:hover{background:rgba(74,222,128,.2);transform:translateY(-1px);box-shadow:0 6px 16px -6px rgba(74,222,128,.4)}
+#csvbtn:active{transform:none}
+.tab:focus-visible,#search:focus-visible,#csvbtn:focus-visible,.card:focus-visible,.empty button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* ---------- layout ---------- */
 main{flex:1;display:grid;grid-template-columns:minmax(320px,420px) 1fr;min-height:0}
-@media(max-width:800px){main{grid-template-columns:1fr;grid-template-rows:45vh 55vh}}
 #map{height:100%;width:100%;z-index:1}
-#list{overflow-y:auto;padding:12px;border-right:1px solid var(--border);scrollbar-width:thin;scrollbar-color:var(--border) transparent}
-.card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:10px;cursor:pointer;transition:border-color .15s, transform .15s}
-.card:hover{border-color:var(--accent);transform:translateY(-1px)}
-.card.sel{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
-.card h3{font-size:.95rem;font-weight:650;display:flex;justify-content:space-between;gap:8px;align-items:baseline}
-.badge{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 8px;border-radius:999px;color:#0b0e12;white-space:nowrap}
+#list{overflow-y:auto;padding:14px;border-right:1px solid var(--border);scrollbar-width:thin;scrollbar-color:var(--border) transparent;scroll-behavior:smooth}
+#list::-webkit-scrollbar{width:9px}
+#list::-webkit-scrollbar-thumb{background:var(--border);border-radius:99px;border:2px solid var(--bg-soft)}
+
+.viewtoggle{display:none;position:absolute;top:10px;left:50%;transform:translateX(-50%);z-index:900;
+  background:var(--panel-raised);border:1px solid var(--border-strong);border-radius:999px;padding:3px;box-shadow:var(--shadow-md)}
+.viewtoggle button{padding:6px 16px;border-radius:999px;border:none;background:none;color:var(--muted);font-family:inherit;font-size:.8rem;font-weight:650;cursor:pointer;transition:.15s}
+.viewtoggle button.on{background:var(--accent);color:#0b0e12}
+
+@media(max-width:800px){
+  main{position:relative;grid-template-columns:1fr;grid-template-rows:1fr}
+  body.mapview #list{display:none}
+  body.listview #map{display:none}
+  .viewtoggle{display:inline-flex}
+  main{grid-template-rows:auto}
+  #list{height:calc(100vh - var(--chrome,220px))}
+  #map{height:calc(100vh - var(--chrome,220px) - 56px)}
+  .count{order:9;width:100%;margin-top:2px}
+}
+
+/* ---------- cards ---------- */
+.card{
+  position:relative;background:var(--card);border:1px solid var(--border);
+  border-radius:var(--radius);padding:13px 15px 12px 17px;margin-bottom:10px;
+  cursor:pointer;overflow:hidden;
+  transition:border-color .15s, transform .15s, background .15s, box-shadow .15s;
+  box-shadow:var(--shadow-sm);
+}
+.card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--cat,var(--accent));opacity:.85;transition:opacity .15s}
+.card:hover{border-color:var(--border-strong);background:var(--card-hover);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.card.sel{border-color:var(--cat,var(--accent));background:var(--card-hover);box-shadow:0 0 0 1px var(--cat,var(--accent)),var(--shadow-md)}
+.card h3{font-size:.95rem;font-weight:650;display:flex;justify-content:space-between;gap:8px;align-items:flex-start;line-height:1.35}
+.badge{font-size:.66rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:3px 8px;border-radius:999px;color:#0b0e12;white-space:nowrap;margin-top:1px}
 .badge.Dispensary{background:var(--disp)} .badge.Hemp{background:var(--hemp)}
 .badge.Smoke{background:var(--smoke)} .badge.Vape{background:var(--vape)}
-.card .addr{color:var(--muted);font-size:.83rem;margin-top:5px;line-height:1.45}
-.card .contact{margin-top:7px;display:flex;gap:12px;flex-wrap:wrap;font-size:.82rem}
-.card a{color:var(--hemp);text-decoration:none}
-.card a:hover{text-decoration:underline}
-.card .owner{margin-top:6px;font-size:.8rem;color:var(--text)}
-.meta{color:var(--muted);font-size:.75rem;margin-top:5px}
-.empty{color:var(--muted);text-align:center;padding:40px 20px;display:flex;flex-direction:column;gap:14px;align-items:center}
-.empty button{padding:8px 18px;border-radius:999px;border:1px solid var(--accent);background:none;color:var(--accent);font-family:inherit;font-size:.85rem;font-weight:600;cursor:pointer}
-.empty button:hover{background:rgba(74,222,128,.1)}
+.card .addr{color:var(--muted);font-size:.83rem;margin-top:6px;line-height:1.45}
+.card .contact{margin-top:8px;display:flex;gap:12px;flex-wrap:wrap;font-size:.82rem}
+.chip{display:inline-flex;align-items:center;gap:5px;color:var(--muted)}
+.card a{color:var(--hemp);text-decoration:none;border-bottom:1px dotted transparent}
+.card a:hover{text-decoration:none;border-bottom-color:currentColor}
+.card .owner{margin-top:8px;font-size:.8rem;color:var(--text);display:flex;align-items:center;gap:5px}
+.owner .avatar{width:18px;height:18px;border-radius:50%;flex:none;background:linear-gradient(135deg,var(--border-strong),var(--panel-raised));color:var(--muted);font-size:.58rem;font-weight:800;display:inline-flex;align-items:center;justify-content:center;letter-spacing:.03em}
+.meta{color:var(--faint);font-size:.72rem;margin-top:6px;padding-top:6px;border-top:1px dashed rgba(255,255,255,.05)}
+
+/* ---------- states ---------- */
+.empty{color:var(--muted);text-align:center;padding:60px 20px;display:flex;flex-direction:column;gap:16px;align-items:center}
+.empty .icon{font-size:2rem;opacity:.6}
+.empty button{padding:9px 20px;border-radius:999px;border:1px solid var(--accent);background:var(--accent-dim);color:var(--accent);font-family:inherit;font-size:.85rem;font-weight:600;cursor:pointer;transition:.15s}
+.empty button:hover{background:rgba(74,222,128,.22)}
 .loading{color:var(--muted);text-align:center;padding:40px 20px}
-.error{color:#f87171;text-align:center;padding:40px 20px}
-footer{padding:8px 24px;border-top:1px solid var(--border);color:var(--muted);font-size:.72rem}
-footer a{color:var(--hemp)}
+.error{color:#f87171;text-align:center;padding:40px 20px;line-height:1.6}
+.error button{margin-top:12px;padding:8px 18px;border-radius:999px;border:1px solid var(--border-strong);background:var(--panel);color:var(--text);font-family:inherit;font-size:.85rem;cursor:pointer}
+
+.skel{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;margin-bottom:10px}
+.skel .l{height:11px;border-radius:99px;margin-bottom:9px;background:linear-gradient(90deg,var(--panel-raised) 25%,#232c38 50%,var(--panel-raised) 75%);background-size:200% 100%;animation:shimmer 1.3s infinite}
+.skel .l.t{height:15px;width:62%}
+.skel .l.a{width:88%}.skel .l.b{width:70%}.skel .l.c{width:44%;margin-bottom:0}
+@keyframes shimmer{to{background-position:-200% 0}}
+
+footer{padding:9px clamp(16px,4vw,28px);border-top:1px solid var(--border);color:var(--faint);font-size:.72rem;background:var(--bg-soft);line-height:1.5}
+
+/* ---------- map ---------- */
 .leaflet-popup-content b{font-size:.95em}
-.leaflet-container{background:#10141a;font-family:inherit}
-.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:var(--card);color:var(--text)}
+.leaflet-container{background:#0d1117;font-family:inherit}
+.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:var(--panel-raised);color:var(--text);box-shadow:var(--shadow-md)}
+.leaflet-popup-content-wrapper{border:1px solid var(--border-strong);border-radius:10px}
+.leaflet-popup-content{margin:12px 16px;line-height:1.5}
 .leaflet-popup-content a{color:var(--hemp)}
+.leaflet-bar a{background:var(--panel-raised)!important;color:var(--text)!important;border-color:var(--border-strong)!important}
+.leaflet-bar a:hover{background:var(--card-hover)!important}
+.leaflet-control-attribution{background:rgba(11,14,19,.75)!important;color:var(--faint)!important}
+.leaflet-control-attribution a{color:var(--muted)!important}
+
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
-<body>
-<header>
-  <h1>Ohio <span>Smoke &amp; Dispensary</span> Directory</h1>
-  <div class="subtitle">Business contacts for Ohio dispensaries · hemp/CBD · smoke shops · vape shops</div>
+<body class="listview">
+<header style="--chrome-offset:0">
+  <div class="brandbar">
+    <div class="logo" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M12 21c-4-3.5-7-6.8-7-10.5A7 7 0 0 1 12 3a7 7 0 0 1 7 7.5C19 14.2 16 17.5 12 21Z"/><circle cx="12" cy="10.5" r="2.6"/></svg>
+    </div>
+    <div>
+      <h1>Ohio <span>Smoke &amp; Dispensary</span> Directory</h1>
+      <div class="subtitle">Business contacts for Ohio dispensaries · hemp/CBD · smoke shops · vape shops</div>
+    </div>
+  </div>
   <div class="controls">
     <div class="searchwrap">
       <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
-      <input id="search" type="search" placeholder="Search name, city, county, ZIP…" aria-label="Search businesses by name, city, county, or ZIP">
+      <input id="search" type="search" placeholder="Search name, city, county, ZIP…   ( / )" aria-label="Search businesses by name, city, county, or ZIP">
       <button id="clear" aria-label="Clear search" hidden>✕</button>
     </div>
     <div class="tabs" id="tabs" role="group" aria-label="Filter by category">
-      <button class="tab active" data-cat="All" aria-pressed="true">All</button>
-      <button class="tab" data-cat="Dispensary" aria-pressed="false">Dispensaries</button>
-      <button class="tab" data-cat="Hemp / CBD" aria-pressed="false">Hemp / CBD</button>
-      <button class="tab" data-cat="Smoke Shop" aria-pressed="false">Smoke Shops</button>
-      <button class="tab" data-cat="Vape Shop" aria-pressed="false">Vape Shops</button>
+      <button class="tab active" data-cat="All" aria-pressed="true">All <span class="n"></span></button>
+      <button class="tab" data-cat="Dispensary" aria-pressed="false">Dispensaries <span class="n"></span></button>
+      <button class="tab" data-cat="Hemp / CBD" aria-pressed="false">Hemp / CBD <span class="n"></span></button>
+      <button class="tab" data-cat="Smoke Shop" aria-pressed="false">Smoke Shops <span class="n"></span></button>
+      <button class="tab" data-cat="Vape Shop" aria-pressed="false">Vape Shops <span class="n"></span></button>
     </div>
     <span class="count" id="count" role="status"></span>
-    <button id="csvbtn" title="Download the current filtered view as a spreadsheet"><span aria-hidden="true">⬇</span> Export CSV</button>
+    <button id="csvbtn" title="Download the current filtered view as a spreadsheet"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16"/></svg> Export CSV</button>
   </div>
 </header>
 <main>
   <div id="list" aria-live="polite"><div class="loading">Loading directory…</div></div>
   <div id="map"></div>
+  <div class="viewtoggle" role="group" aria-label="Switch between list and map view">
+    <button id="vt-list" class="on">☰ List</button>
+    <button id="vt-map">🗺 Map</button>
+  </div>
 </main>
 <footer>Data sources: Ohio Dept. of Commerce Division of Cannabis Control (licensed dispensaries), OpenStreetMap &amp; public directories. Contact info as published by each business. Built for B2B outreach research.</footer>
 
@@ -104,10 +221,12 @@ footer a{color:var(--hemp)}
 <script>
 let DATA=[];
 const CATKEY={'Hemp / CBD':'Hemp','Smoke Shop':'Smoke','Vape Shop':'Vape'};
+const CATCOLOR={Dispensary:'#4ade80','Hemp / CBD':'#38bdf8','Smoke Shop':'#f59e0b','Vape Shop':'#a78bfa'};
 let activeCat='All', query='', markers=[], map;
 
 function badgeClass(c){return c==='Dispensary'?'Dispensary':(CATKEY[c]||'Dispensary')}
-function catColor(c){return {Dispensary:'#4ade80','Hemp / CBD':'#38bdf8','Smoke Shop':'#f59e0b','Vape Shop':'#a78bfa'}[c]||'#888'}
+function catColor(c){return CATCOLOR[c]||'#888'}
+function initials(s){return (s||'?').replace(/[^A-Za-z ]/g,'').split(/\s+/).filter(Boolean).slice(0,2).map(w=>w[0]).join('').toUpperCase()||'?'}
 
 fetch('data/businesses.json')
   .then(r=>{ if(!r.ok) throw new Error(r.status); return r.json(); })
@@ -116,14 +235,23 @@ fetch('data/businesses.json')
     init();
   })
   .catch(()=>{
-    document.getElementById('list').innerHTML='<div class="error">Couldn\'t load the directory data.<br>Please refresh the page to try again.</div>';
+    document.getElementById('list').innerHTML='<div class="error">⚠️ Couldn\'t load the directory data.<br>Please refresh the page to try again.<br><button onclick="location.reload()">Retry</button></div>';
   });
 
 function init(){
   map=L.map('map',{zoomControl:true,preferCanvas:true}).setView([40.2,-82.8],7);
   L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{attribution:'© OpenStreetMap © CARTO',maxZoom:19}).addTo(map);
 
-  render();
+  // populate per-category counts on the tabs
+  const counts={All:DATA.length};
+  DATA.forEach(b=>counts[b.category]=(counts[b.category]||0)+1);
+  document.querySelectorAll('#tabs .tab').forEach(t=>{
+    const n=t.querySelector('.n');
+    if(n) n.textContent=(counts[t.dataset.cat]||0).toLocaleString();
+  });
+
+  renderSkeleton();
+  setTimeout(render,0);
 
   const search=document.getElementById('search');
   const clearBtn=document.getElementById('clear');
@@ -138,6 +266,9 @@ function init(){
     search.value=''; query=''; clearBtn.hidden=true; render(); search.focus();
   });
   search.addEventListener('keydown',e=>{ if(e.key==='Escape'&&search.value){search.value='';query='';clearBtn.hidden=true;render()} });
+  document.addEventListener('keydown',e=>{
+    if(e.key==='/'&&!/INPUT|TEXTAREA/.test(document.activeElement.tagName)){e.preventDefault();search.focus();search.select()}
+  });
 
   document.querySelectorAll('#tabs .tab').forEach(t=>t.addEventListener('click',()=>{
     document.querySelectorAll('#tabs .tab').forEach(x=>{x.classList.remove('active');x.setAttribute('aria-pressed','false')});
@@ -146,6 +277,28 @@ function init(){
   }));
 
   document.getElementById('csvbtn').addEventListener('click',exportCSV);
+
+  const setViewMode=v=>{
+    document.body.classList.toggle('mapview',v==='map');
+    document.body.classList.toggle('listview',v==='list');
+    document.getElementById('vt-list').classList.toggle('on',v==='list');
+    document.getElementById('vt-map').classList.toggle('on',v==='map');
+    if(v==='map') setTimeout(()=>map&&map.invalidateSize(),50);
+    window.scrollTo({top:0,behavior:'smooth'});
+  };
+  document.getElementById('vt-list').addEventListener('click',()=>setViewMode('list'));
+  document.getElementById('vt-map').addEventListener('click',()=>setViewMode('map'));
+  window.__setMapView=setViewMode;
+}
+
+function renderSkeleton(){
+  const list=document.getElementById('list');
+  list.innerHTML='';
+  for(let i=0;i<8;i++){
+    const s=document.createElement('div'); s.className='skel';
+    s.innerHTML='<div class="l t"></div><div class="l a"></div><div class="l b"></div><div class="l c"></div>';
+    list.appendChild(s);
+  }
 }
 
 function matches(b){
@@ -160,22 +313,24 @@ function render(){
   markers.forEach(m=>map.removeLayer(m)); markers=[];
   // group duplicates by name+city
   const shown=new Set(); let n=0;
+  const frag=document.createDocumentFragment();
   DATA.forEach(b=>{
     if(!matches(b))return;
     const key=b.name+'|'+b.city;
     if(shown.has(key))return; shown.add(key);
     n++;
     const div=document.createElement('div'); div.className='card'; div.dataset.name=key;
+    div.style.setProperty('--cat',catColor(b.category));
     div.setAttribute('role','button'); div.setAttribute('tabindex','0');
     const addr=[b.address,b.city,'OH',(b.zip||'').toString()].filter(Boolean).join(', ');
     div.innerHTML=`<h3>${esc(b.name)}<span class="badge ${badgeClass(b.category)}">${esc(shortCat(b.category))}</span></h3>
       <div class="addr">${esc(addr)}${b.county?` · ${esc(b.county)} County`:''}</div>
       <div class="contact">
-        ${b.phone?`<span>📞 <a href="tel:${esc(b.phone)}">${esc(b.phone)}</a></span>`:''}
-        ${b.website?`<span>🌐 <a href="${esc(fixUrl(b.website))}" target="_blank" rel="noopener">website</a></span>`:''}
-        ${b.contact_email?`<span>✉️ <a href="mailto:${esc(b.contact_email)}">email</a></span>`:''}
+        ${b.phone?`<span class="chip">📞 <a href="tel:${esc(b.phone)}">${esc(b.phone)}</a></span>`:''}
+        ${b.website?`<span class="chip">🌐 <a href="${esc(fixUrl(b.website))}" target="_blank" rel="noopener">website</a></span>`:''}
+        ${b.contact_email?`<span class="chip">✉️ <a href="mailto:${esc(b.contact_email)}">email</a></span>`:''}
       </div>
-      ${b.owner?`<div class="owner">👤 ${esc(b.owner)}</div>`:''}
+      ${b.owner?`<div class="owner"><span class="avatar">${esc(initials(b.owner))}</span>${esc(b.owner)}</div>`:''}
       <div class="meta">Source: ${esc(b.source||'')}</div>`;
     const select=()=>{
       document.querySelectorAll('.card').forEach(c=>c.classList.remove('sel')); div.classList.add('sel');
@@ -184,21 +339,22 @@ function render(){
         const ll=m.getLatLng();
         if(Math.abs(ll.lat-b.lat)<1e-9&&Math.abs(ll.lng-b.lon)<1e-9) m.openPopup();
       });
-      if(window.innerWidth<=800) window.scrollTo({top:0,behavior:'smooth'});
+      if(window.innerWidth<=800&&document.body.classList.contains('listview')) window.__setMapView('map');
     };
     div.addEventListener('click',select);
     div.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();select()}});
-    list.appendChild(div);
+    frag.appendChild(div);
     const m=L.circleMarker([b.lat,b.lon],{radius:7,color:catColor(b.category),weight:2,fillColor:catColor(b.category),fillOpacity:.55})
       .bindPopup(`<b>${esc(b.name)}</b><br>${esc(shortCat(b.category))}<br>${esc(addr)}${b.phone?`<br>📞 ${esc(b.phone)}`:''}${b.website?`<br>🌐 <a href="${esc(fixUrl(b.website))}" target="_blank" rel="noopener">website</a>`:''}${b.owner?`<br>👤 ${esc(b.owner)}`:''}`);
     m.addTo(map); markers.push(m);
   });
+  list.appendChild(frag);
   const total=DATA.length;
-  document.getElementById('count').textContent = (n===total && activeCat==='All' && !query)
-    ? `${total} businesses`
-    : `${n} of ${total} businesses`;
+  document.getElementById('count').innerHTML = (n===total && activeCat==='All' && !query)
+    ? `<b>${total.toLocaleString()}</b> businesses`
+    : `<b>${n.toLocaleString()}</b> of ${total.toLocaleString()} businesses`;
   if(!n) {
-    list.innerHTML='<div class="empty"><div>No results match your filters.</div><button id="resetbtn">Clear filters</button></div>';
+    list.innerHTML='<div class="empty"><div class="icon" aria-hidden="true">🔍</div><div>No results match your filters.</div><button id="resetbtn">Clear filters</button></div>';
     document.getElementById('resetbtn').addEventListener('click',()=>{
       activeCat='All'; query='';
       document.getElementById('search').value='';
